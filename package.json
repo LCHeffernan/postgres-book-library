@@ -1,0 +1,37 @@
+{
+  "name": "postgres-book-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "node scripts/create-database.js",
+    "start": "nodemon -r dotenv/config index.js",
+    "pretest": "node scripts/create-database.js test",
+    "test": "mocha tests/**/*.test.js",
+    "posttest": "node scripts/drop-database.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LCHeffernan/postgres-book-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LCHeffernan/postgres-book-library/issues"
+  },
+  "homepage": "https://github.com/LCHeffernan/postgres-book-library#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "D": "^1.0.0",
+    "express": "^4.18.2",
+    
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3",
+    "mocha": "^10.1.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
